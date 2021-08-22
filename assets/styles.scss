@@ -1,0 +1,187 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+// variables
+$primary-color: hsl(172, 67%, 45%);
+$dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan-one: hsl(186, 14%, 43%);
+$dark-grayish-cyan-two: hsl(184, 14%, 56%);
+$light-grayish-cyan-one: hsl(184, 26%, 78%);
+$light-grayish-cyan-two: hsl(189, 41%, 97%);
+
+$font: "Space-Mono", monospace;
+
+// mix-ins
+@mixin flex ($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// styles
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 16px $font;
+    color: $dark-cyan;
+    background-color: $light-grayish-cyan-one;
+    height: 100vh;
+    @include flex(column, center, center);
+}
+
+.logo, .calculator {
+    margin: 3rem 0;
+}
+
+.logo {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-size: 0.75rem;
+}
+
+.calculator {
+    max-width: 850px;
+    background-color: $light-grayish-cyan-two;
+    border-radius: 1rem;
+    padding: 2rem;
+    @include flex(row, space-between, center);
+    gap: 3rem;
+}
+
+.col {
+    width: 50%;
+    height: 22rem;
+    @include flex(column, center, center);
+}
+
+.input {
+    @include flex(column, center, flex-start);
+    gap: 2.5rem;
+}
+
+.output {
+    @include flex(column, space-between, center);
+    padding: 2rem;
+    background-color: $dark-cyan;
+    border-radius: 1rem;
+}
+
+.input > div {
+    width: 100%;
+}
+
+.bill, .people {
+    position: relative;
+}
+
+.bill i, .people i {
+    position: absolute;
+    top: 53px;
+    left: 15px;
+    color: $light-grayish-cyan-one;
+}
+
+label, legend {
+    display: block;
+    font-weight: 700;
+    margin: 0.75rem 0;
+    color: $dark-grayish-cyan-one;
+}
+
+input[type=text] {
+    width: 100%;
+    height: 2rem;
+    border: none;
+    text-align: right;
+    font: 1.25rem $font;
+}
+
+::placeholder { 
+    color: $light-grayish-cyan-one;
+    opacity: 1;
+}
+
+fieldset {
+    border: 0;
+}
+
+.tip-wrapper {
+    width: 100%;
+    @include flex(row, space-between, center);
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 0.75rem;
+}
+
+.btn, input[type=text].btn {
+    font: 1.25rem $font;
+    text-align: center;
+    width: 7rem;
+    background-color: $dark-cyan;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    // margin: 0 1rem 1rem 0;
+    padding: 0.5rem 1rem;
+}
+
+input[type=text].btn::placeholder {
+    color: $dark-grayish-cyan-one;
+}
+
+input[type=text].btn {
+    background-color: #fff;
+    color: $dark-cyan;
+    width: 6rem;
+    height: initial;
+    padding: 0.5rem;
+}
+
+.tip-total-wrapper, .reset-wrapper {
+    width: 100%;
+    @include flex(column, space-between, center);
+    gap: 2rem;
+}
+
+.tip-total {
+    width: 100%;
+    @include flex(row, space-between, center);
+    color: #fff;
+}
+
+.per-person {
+    font-size: 0.75rem;
+    color: $dark-grayish-cyan-two;
+}
+
+.amount {
+    font-weight: 700;
+    font-size: 3rem;
+    color: $primary-color;
+}
+
+.btn-reset {
+    width: 100%;
+    background-color: $primary-color;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $dark-cyan;
+    padding: 0.75rem;
+}
+
+.btn-reset:disabled {
+    background-color: $dark-grayish-cyan-one;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    @include flex(row, center, center);
+}

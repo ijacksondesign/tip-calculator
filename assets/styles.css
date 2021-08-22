@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 16px "Space-Mono", monospace;
+  color: #00494d;
+  background-color: #b8d4d5;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo, .calculator {
+  margin: 3rem 0;
+}
+
+.logo {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-size: 0.75rem;
+}
+
+.calculator {
+  max-width: 850px;
+  background-color: #f4fafa;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+
+.col {
+  width: 50%;
+  height: 22rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.output {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  background-color: #00494d;
+  border-radius: 1rem;
+}
+
+.input > div {
+  width: 100%;
+}
+
+.bill, .people {
+  position: relative;
+}
+
+.bill i, .people i {
+  position: absolute;
+  top: 53px;
+  left: 15px;
+  color: #b8d4d5;
+}
+
+label, legend {
+  display: block;
+  font-weight: 700;
+  margin: 0.75rem 0;
+  color: #5e7a7d;
+}
+
+input[type=text] {
+  width: 100%;
+  height: 2rem;
+  border: none;
+  text-align: right;
+  font: 1.25rem "Space-Mono", monospace;
+}
+
+::-webkit-input-placeholder {
+  color: #b8d4d5;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #b8d4d5;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #b8d4d5;
+  opacity: 1;
+}
+
+::placeholder {
+  color: #b8d4d5;
+  opacity: 1;
+}
+
+fieldset {
+  border: 0;
+}
+
+.tip-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  gap: 0.75rem;
+}
+
+.btn, input[type=text].btn {
+  font: 1.25rem "Space-Mono", monospace;
+  text-align: center;
+  width: 7rem;
+  background-color: #00494d;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+}
+
+input[type=text].btn::-webkit-input-placeholder {
+  color: #5e7a7d;
+}
+
+input[type=text].btn:-ms-input-placeholder {
+  color: #5e7a7d;
+}
+
+input[type=text].btn::-ms-input-placeholder {
+  color: #5e7a7d;
+}
+
+input[type=text].btn::placeholder {
+  color: #5e7a7d;
+}
+
+input[type=text].btn {
+  background-color: #fff;
+  color: #00494d;
+  width: 6rem;
+  height: initial;
+  padding: 0.5rem;
+}
+
+.tip-total-wrapper, .reset-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.tip-total {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.per-person {
+  font-size: 0.75rem;
+  color: #7f9c9f;
+}
+
+.amount {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #26c0ab;
+}
+
+.btn-reset {
+  width: 100%;
+  background-color: #26c0ab;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00494d;
+  padding: 0.75rem;
+}
+
+.btn-reset:disabled {
+  background-color: #5e7a7d;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=styles.css.map */
