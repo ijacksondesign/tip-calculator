@@ -138,6 +138,18 @@ input[type=text] {
   border: none;
   text-align: right;
   font: 1.25rem "Space-Mono", monospace;
+  padding-right: 1rem;
+}
+
+input[type=text]:focus, input[type=text].btn:focus {
+  outline: none;
+  border: 2px solid #26c0ab;
+  border-radius: 0.25rem;
+}
+
+input[type=text].btn:focus {
+  width: 5.75rem;
+  height: 19px;
 }
 
 ::-webkit-input-placeholder {
